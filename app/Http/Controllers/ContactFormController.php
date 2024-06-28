@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ContactForm;
 use Illuminate\Http\Request;
 use App\Services\CheckFormService;
+use App\Http\Requests\StoreContactRequest;
 
 class ContactFormController extends Controller
 {
@@ -36,7 +37,7 @@ class ContactFormController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreContactRequest $request)
     {
         // dd($request, $request->name);
 
