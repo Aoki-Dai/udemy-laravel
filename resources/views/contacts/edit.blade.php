@@ -10,7 +10,7 @@
             <div class="overflow-hidden bg-white shadow-sm dark:bg-gray-800 sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <section class="relative text-gray-600 body-font">
-                        <form method="post" action="{{ route('contacts.store') }}">
+                        <form method="post" action="{{ route('contacts.update', ['id' => $contact->id ]) }}">
                             @csrf
                         <div class="container px-5 mx-auto">
 
@@ -76,7 +76,7 @@
                               </div>
 
                               <div class="w-full p-2">
-                                <button class="flex px-8 py-2 mx-auto text-lg text-white bg-indigo-500 border-0 rounded focus:outline-none hover:bg-indigo-600">新規登録する</button>
+                                <button class="flex px-8 py-2 mx-auto text-lg text-white bg-indigo-500 border-0 rounded focus:outline-none hover:bg-indigo-600">更新する</button>
                             </div>
                           </div>
                         </div>
