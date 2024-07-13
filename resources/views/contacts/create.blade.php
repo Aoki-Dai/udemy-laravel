@@ -20,36 +20,36 @@
                               <div class="w-full p-2">
                                 <div class="relative">
                                   <label for="name" class="text-sm leading-7 text-gray-600">氏名</label>
-                                  <input type="text" id="name" name="name" class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200">
+                                  <input type="text" id="name" name="name" value="{{ old('name') }}" class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200">
                                 </div>
                               </div>
 
                               <div class="w-full p-2">
                                 <div class="relative">
                                   <label for="title" class="text-sm leading-7 text-gray-600">件名</label>
-                                  <input type="text" id="title" name="title" class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200">
+                                  <input type="text" id="title" name="title" value="{{ old('title') }}" class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200">
                                 </div>
                               </div>
 
                               <div class="w-full p-2">
                                 <div class="relative">
                                   <label for="email" class="text-sm leading-7 text-gray-600">メールアドレス</label>
-                                  <input type="email" id="email" name="email" class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200">
+                                  <input type="email" id="email" name="email" value="{{ old('email') }}" class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200">
                                 </div>
                               </div>
 
                               <div class="w-full p-2">
                                 <div class="relative">
                                   <label for="url" class="text-sm leading-7 text-gray-600">ホームページ</label>
-                                  <input type="url" id="url" name="url" class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200">
+                                  <input type="url" id="url" name="url" value="{{ old('url') }}" class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200">
                                 </div>
                               </div>
 
                               <div class="w-full p-2">
                                 <div class="relative">
                                   <label for="name" class="text-sm leading-7 text-gray-600">性別</label><br>
-                                  <input type="radio" name="gender" value="0">男性
-                                  <input type="radio" name="gender" value="1">女性
+                                  <input type="radio" name="gender" value="0" {{ old('gender') == 0 ? 'checked' : ''}}>男性
+                                  <input type="radio" name="gender" value="1" {{ old('gender') == 1 ? 'checked' : ''}}>女性
                                 </div>
                               </div>
 
@@ -58,12 +58,12 @@
                                   <label for="age" class="text-sm leading-7 text-gray-600">年齢</label>
                                   <select name="age">
                                     <option value="">選択してください</option>
-                                    <option value="1">～19歳</option>
-                                    <option value="2">20歳～29歳</option>
-                                    <option value="3">30歳～39歳</option>
-                                    <option value="4">40歳～49歳</option>
-                                    <option value="5">50歳～59歳</option>
-                                    <option value="6">60歳～</option>
+                                    <option value="1" {{ old('age') == 1 ? 'selected' : ''}} >～19歳</option>
+                                    <option value="2" {{ old('age') == 2 ? 'selected' : ''}} >20歳～29歳</option>
+                                    <option value="3" {{ old('age') == 3 ? 'selected' : ''}} >30歳～39歳</option>
+                                    <option value="4" {{ old('age') == 4 ? 'selected' : ''}} >40歳～49歳</option>
+                                    <option value="5" {{ old('age') == 5 ? 'selected' : ''}} >50歳～59歳</option>
+                                    <option value="6" {{ old('age') == 6 ? 'selected' : ''}} >60歳～</option>
                                     </select>
                                    </form>
                                 </div>
@@ -72,7 +72,7 @@
                               <div class="w-full p-2">
                                 <div class="relative">
                                   <label for="contact" class="text-sm leading-7 text-gray-600">お問い合わせ</label>
-                                  <textarea id="contact" name="contact" class="w-full h-32 px-3 py-1 text-base leading-6 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none resize-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"></textarea>
+                                  <textarea id="contact" name="contact" class="w-full h-32 px-3 py-1 text-base leading-6 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none resize-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200">{{ old('contact') }} </textarea>
                                 </div>
                               </div>
 
