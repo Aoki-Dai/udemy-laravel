@@ -10,7 +10,11 @@
             <div class="overflow-hidden bg-white shadow-sm dark:bg-gray-800 sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     index<br>
-                    <a href="{{ route('contacts.create') }}" class="text-blue-500">新規登録</a>
+                    <a href="{{ route('contacts.create') }}" class="text-blue-500">新規登録</a><br>
+                    <form class="mb-8" method="get" action="{{ route('contacts.index') }}">
+                        <input type="text" name="search" placeholder="検索">
+                        <button class="px-8 py-2 text-lg text-white bg-indigo-500 border-0 rounded focus:outline-none hover:bg-indigo-600">検索する</button>
+                    </form>
 
 
                     <div class="w-full mx-auto overflow-auto lg:w-2/3">
