@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Route;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -17,8 +18,13 @@ class DatabaseSeeder extends Seeder
         $this->call([
             TestSeeder::class,
             UserSeeder::class,
+            AreaSeeder::class,
+            ShopSeeder::class,
+            RouteSeeder::class,
+            RouteShopSeeder::class
         ]);
-        // \App\Models\User::factory(10)->create();
+
+        \App\Models\ContactForm::factory(100)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
